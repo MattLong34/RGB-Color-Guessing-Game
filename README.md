@@ -10,7 +10,7 @@
 * [Contact](#contact)
 
 ## General info
-The Great RGB Color Guessing Game is a fun way to test your RGB value skills! Start with a value and try and guess which color swatch matches. Play on easy mode, hard mode, or reset the board at any time.
+The Great RGB Color Guessing Game is a fun way to test your RGB value skills! Start with a value and try to guess which color swatch matches. Play on easy mode, hard mode, or reset the board at any time.
 
 ## Technologies
 * HTML5
