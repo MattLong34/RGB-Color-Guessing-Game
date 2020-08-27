@@ -1,12 +1,12 @@
-var numSquares = 6;
-var colors = generateRandomColors(numSquares);
-var squares = document.querySelectorAll(".square");
-var pickedColor = pickColor();
-var colorDisplay = document.getElementById("colorDisplay");
-var messageDisplay = document.querySelector("#message");
-var h1 = document.querySelector("h1");
-var resetButton = document.querySelector("#reset");
-var modeButtons = document.querySelectorAll(".mode");
+let numSquares = 6;
+let colors = generateRandomColors(numSquares);
+let squares = document.querySelectorAll(".square");
+let pickedColor = pickColor();
+const colorDisplay = document.getElementById("colorDisplay");
+const messageDisplay = document.querySelector("#message");
+const h1 = document.querySelector("h1");
+const resetButton = document.querySelector("#reset");
+const modeButtons = document.querySelectorAll(".mode");
 
 for(var i = 0; i < modeButtons.length; i++) {
 	modeButtons[i].addEventListener("click", function() {
