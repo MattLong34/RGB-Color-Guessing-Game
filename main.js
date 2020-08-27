@@ -8,7 +8,7 @@ const h1 = document.querySelector("h1");
 const resetButton = document.querySelector("#reset");
 const modeButtons = document.querySelectorAll(".mode");
 
-for(var i = 0; i < modeButtons.length; i++) {
+for(let i = 0; i < modeButtons.length; i++) {
 	modeButtons[i].addEventListener("click", function() {
 		modeButtons[0].classList.remove("selected");
 		modeButtons[1].classList.remove("selected");
@@ -27,7 +27,7 @@ function reset() {
 	resetButton.textContent = "New Colors";
 	messageDisplay.textContent = "";
 	//change colors of squares
-	for(var i = 0; i < squares.length; i++) {
+	for(let i = 0; i < squares.length; i++) {
 		if(colors[i]){
 			squares[i].style.display = "block";
 			squares[i].style.background = colors[i];
@@ -44,14 +44,14 @@ resetButton.addEventListener("click", function() {
 
 colorDisplay.textContent = pickedColor;
 
-for(var i = 0; i < squares.length; i++){
+for(let i = 0; i < squares.length; i++){
 	// add initial colors to squares
 	squares[i].style.background = colors[i];
 
 	//add click listeners to squares
 	squares[i].addEventListener("click", function() {
 		//grab color of clicked squares
-		var clickedColor = this.style.background;
+		let clickedColor = this.style.background;
 		//compare color to pickedColor
 		if(clickedColor === pickedColor) {
 			messageDisplay.textContent = "Correct!";
@@ -67,7 +67,7 @@ for(var i = 0; i < squares.length; i++){
 
 function changeColors(color) {
 	//loop through all squares
-	for(var i = 0; i < squares.length; i++) {
+	for(let i = 0; i < squares.length; i++) {
 		//change each color to match given color
 		squares[i].style.background = color;
 	}
@@ -80,9 +80,9 @@ function pickColor() {
 
 function generateRandomColors(num) {
 	//make an array
-	var arr = [];
+	let arr = [];
 	//add num random colors to arr
-	for(var i = 0; i < num; i++) {
+	for(let i = 0; i < num; i++) {
 		//get random color and push into arr
 		arr.push(randomColor());
 	}
@@ -92,10 +92,10 @@ function generateRandomColors(num) {
 
 function randomColor() {
 	//pick a "red" from 0 - 255
-	var r = Math.floor(Math.random() * 256);
+	let r = Math.floor(Math.random() * 256);
 	//pick a "green" from 0 - 255
-	var g = Math.floor(Math.random() * 256);
+	let g = Math.floor(Math.random() * 256);
 	//pick a "blue" from 0 - 255
-	var b = Math.floor(Math.random() * 256);
+	let b = Math.floor(Math.random() * 256);
 	return "rgb(" + r + ", " + g + ", " + b + ")";
 }
